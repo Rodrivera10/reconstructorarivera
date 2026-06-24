@@ -3,12 +3,11 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustStrip from "@/components/TrustStrip";
 import About from "@/components/About";
-import Sectors from "@/components/Sectors";
 import Audience from "@/components/Audience";
 import Services from "@/components/Services";
 import Results from "@/components/Results";
 import Process from "@/components/Process";
-import Team from "@/components/Team";
+import Verse from "@/components/Verse";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
@@ -24,12 +23,11 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <About />
-      <Sectors />
       <Audience />
       <Services />
       <Results />
       <Process />
-      <Team />
+      <Verse />
       <Testimonials />
       <Faq />
       <CtaBand />

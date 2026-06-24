@@ -16,7 +16,7 @@ export default function TrustStrip() {
         </div>
         <div className="item rv">
           <span className="t-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}><path d="M12 2l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6z" /><path d="M9 12l2 2 4-4" /></svg></span>
-          <b>★★★★★</b><small>Calidad garantizada</small>
+          <b>★★★★★</b><small>Calidad respaldada</small>
         </div>
       </div>
     </section>

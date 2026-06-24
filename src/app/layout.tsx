@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
+import Analytics from "@/components/Analytics";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Reconstructora Rivera | Rectificación de Motores en Guatemala",
   description:
-    "Más de 25 años reconstruyendo y rectificando motores automotrices e industriales en Guatemala. Block, cigüeñal, culatas, bielas. Calidad garantizada. Zona 21.",
+    "Más de 25 años reconstruyendo y rectificando motores automotrices e industriales en Guatemala. Block, cigüeñal, culatas, bielas. Calidad respaldada. Zona 21.",
 };
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable}`}>
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }

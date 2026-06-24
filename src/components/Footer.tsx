@@ -22,7 +22,6 @@ export default function Footer() {
           <h5>Enlaces</h5>
           <ul>
             <li><a href="#nosotros">¿Quiénes somos?</a></li>
-            <li><a href="#sectores">Sectores que trabajamos</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#proceso">Cómo trabajamos</a></li>
             <li><a href="#contacto">Contáctanos</a></li>

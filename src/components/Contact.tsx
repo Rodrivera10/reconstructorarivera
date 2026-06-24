@@ -88,7 +88,7 @@ export default function Contact() {
                 <label style={{ marginTop: 14 }}>Fecha preferida</label>
               </div>
               <div className="form-row" style={{ marginTop: 0 }}>
-                <select name="modalidad"><option>Dejar la pieza en el taller</option><option>Necesito orientación primero</option><option>Soy taller / trabajo recurrente</option><option>Recoger a domicilio (consultar)</option></select>
+                <select name="modalidad"><option>Dejar la pieza en la reconstructora</option><option>Necesito orientación primero</option><option>Soy taller / trabajo recurrente</option><option>Recoger a domicilio (consultar)</option></select>
                 <input type="date" name="fecha" />
               </div>
               <label>Mensaje (opcional)</label>

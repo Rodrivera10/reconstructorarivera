@@ -17,14 +17,12 @@ export const SOCIAL = {
 export const waLink = (text?: string) =>
   `https://wa.me/${WA}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
 
-// ---- HERO (slider). Cambia las imágenes por /img/hero-1.jpg etc. cuando las subas ----
+// ---- HERO (slider). Cada slide puede ser un video (.mp4) o una imagen (.jpg/url);
+// el componente Hero detecta el tipo por la extensión. ----
 export const HERO_SLIDES = [
-  // "/img/hero-1.jpg",
-  "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80",
-  // "/img/hero-2.jpg",
-  "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=1600&q=80",
-  // "/img/hero-3.jpg",
-  "https://images.unsplash.com/photo-1504222490345-c075b6008014?w=1600&q=80",
+  "/video/hero-1.mp4",
+  "/video/hero-2.mp4",
+  "/video/hero-3.mp4",
 ];
 
 // ---- SECTORES que trabajamos ----
@@ -118,15 +116,34 @@ export const FAQS = [
     a: "Sí. Trabajamos motores de gasolina y diesel, de 4, 6 y 8 cilindros, tanto para vehículos particulares como para transporte e industria.",
   },
   {
-    q: "¿La garantía cubre tanto la mano de obra como las piezas?",
-    a: "La garantía cubre el trabajo de maquinado realizado por nuestro taller. Te explicamos las condiciones específicas según el servicio al momento de la cotización.",
+    q: "¿Qué respaldo tienen los trabajos?",
+    a: "Respondemos por el trabajo de maquinado que realizamos. Te explicamos las condiciones específicas según el servicio al momento de la cotización.",
   },
   {
     q: "¿Cómo solicito una cotización?",
-    a: "Puedes llenar el formulario de esta página, escribirnos directo por WhatsApp al +502 5311-5249, o llevar la pieza al taller en 2a Ave 2-66, Guajitos, Zona 21.",
+    a: "Puedes llenar el formulario de esta página, escribirnos directo por WhatsApp al +502 5311-5249, o llevar la pieza a nuestras instalaciones en 2a Ave 2-66, Guajitos, Zona 21.",
   },
   {
     q: "¿Atienden los sábados?",
     a: "Sí, atendemos de lunes a viernes de 7:00 a 16:00 y los sábados de 7:00 a 12:00. Los domingos permanecemos cerrados.",
   },
+];
+
+// ---- GALERÍA DE TRABAJOS ----
+// Coloca tus fotos reales en: public/img/galeria/  (con estos nombres exactos).
+// Si una imagen aún no existe, esa tarjeta saldrá en blanco hasta que la subas.
+export const GALLERY_CATS = ["Todos", "Block", "Culatas", "Cigüeñal", "Soldadura"] as const;
+
+export type GalleryItem = { img: string; cat: (typeof GALLERY_CATS)[number]; alt: string };
+
+export const GALLERY: GalleryItem[] = [
+  { img: "/img/galeria/block-1.jpg", cat: "Block", alt: "Block rectificado" },
+  { img: "/img/galeria/block-2.jpg", cat: "Block", alt: "Cilindros a sobremedida" },
+  { img: "/img/galeria/block-3.jpg", cat: "Block", alt: "Maquinado de precisión" },
+  { img: "/img/galeria/culata-1.jpg", cat: "Culatas", alt: "Culata cepillada" },
+  { img: "/img/galeria/culata-2.jpg", cat: "Culatas", alt: "Válvulas nuevas" },
+  { img: "/img/galeria/ciguenal-1.jpg", cat: "Cigüeñal", alt: "Cigüeñal pulido" },
+  { img: "/img/galeria/ciguenal-2.jpg", cat: "Cigüeñal", alt: "Muñones rectificados" },
+  { img: "/img/galeria/soldadura-1.jpg", cat: "Soldadura", alt: "Soldadura de aluminio" },
+  { img: "/img/galeria/soldadura-2.jpg", cat: "Soldadura", alt: "Reparación estructural" },
 ];

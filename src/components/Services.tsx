@@ -1,5 +1,19 @@
 import { SERVICE_CATS } from "@/lib/site";
 import { IcCheck } from "./icons";
+import ServiceMedia, { type Media } from "./ServiceMedia";
+
+// Multimedia por categoría (mismo orden que SERVICE_CATS).
+const V = (slug: string): Media => ({ type: "video", src: `/servicios/${slug}.mp4`, poster: `/servicios/${slug}.jpg` });
+const I = (slug: string): Media => ({ type: "image", src: `/servicios/${slug}.jpg` });
+
+const CAT_MEDIA: Media[][] = [
+  [V("motor-block-2"), V("motor-block-1")], // Motor y Block (secundario primero)
+  [V("bancada-2"), V("bancada-1")],         // Bancada, Levas y Bielas (secundario primero)
+  [V("culatas-2"), V("culatas-1")],         // Culatas y Válvulas (secundario primero)
+  [V("inyeccion-1"), V("inyeccion-2")],     // Sistema de Inyección (orden original)
+  [V("pistones-2"), I("pistones-1")],       // Pistones y Cigüeñal (secundario primero)
+  [I("soldadura-1"), V("soldadura-2")],     // Soldadura Especializada (orden original)
+];
 
 // Un icono por categoría (en el mismo orden que SERVICE_CATS)
 const CAT_ICONS = [
@@ -29,6 +43,7 @@ export default function Services() {
         <div className="svc-cats rv rv-stagger">
           {SERVICE_CATS.map((c, i) => (
             <article className="svc-cat" key={c.cat}>
+              {CAT_MEDIA[i] && <ServiceMedia items={CAT_MEDIA[i]} label={c.cat} />}
               <div className="svc-cat-head">
                 <span className="svc-cat-ic">{CAT_ICONS[i]}</span>
                 <div>

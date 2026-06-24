@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Videos fuente (.MOV) – no se sirven ni se versionan
+/media-src/
